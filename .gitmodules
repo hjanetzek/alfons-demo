@@ -1,0 +1,6 @@
+[submodule "alfons"]
+	path = alfons
+	url = https://github.com/hjanetzek/alfons
+[submodule "harfbuzz-icu-freetype"]
+	path = harfbuzz-icu-freetype
+	url = https://github.com/tangrams/harfbuzz-icu-freetype.git
