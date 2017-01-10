@@ -11,11 +11,14 @@
 #include "alfons/font.h"
 #include "alfons/textBatch.h"
 #include "alfons/utils.h"
-#include "alfons/path/mathUtils.h"
 
 #include <set>
 
 using namespace alfons;
+
+static const float PI = M_PI;
+static const float TWO_PI = M_PI * 2.0;
+static const float HALF_PI = M_PI * 0.5;
 
 class TextSpiral {
 

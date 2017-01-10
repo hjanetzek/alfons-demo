@@ -40,7 +40,7 @@ void onSetup(int w, int h) {
 
     renderer.init();
 
-    font = fontMan.addFont("default", InputSource(DEFAULT), TEXT_SIZE);
+    font = fontMan.addFont("default", Font::Properties(TEXT_SIZE), InputSource(DEFAULT));
     font->addFace(fontMan.addFontFace(InputSource(FONT_AR), TEXT_SIZE));
     font->addFace(fontMan.addFontFace(InputSource(FONT_HE), TEXT_SIZE));
     font->addFace(fontMan.addFontFace(InputSource(FONT_HI), TEXT_SIZE));

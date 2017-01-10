@@ -37,7 +37,7 @@ double prevt = 0;
 
 void onSetup(int w, int h) {
 
-    font = fontMan.addFont("default", InputSource(DEFAULT), TEXT_SIZE);
+    font = fontMan.addFont("default", Font::Properties(TEXT_SIZE), InputSource(DEFAULT));
     font->addFace(fontMan.addFontFace(InputSource(FONT_AR), TEXT_SIZE));
     font->addFace(fontMan.addFontFace(InputSource(FONT_JA), TEXT_SIZE));
     font->addFace(fontMan.addFontFace(InputSource(FALLBACK), TEXT_SIZE));
@@ -57,7 +57,7 @@ void onSetup(int w, int h) {
     spline.add(x-200, y);
     spline.close();
 
-    spline.flush(SplinePath::Type::bspline, peanutPath, 10);
+    peanutPath.sampleSpline(spline, SplineType::bspline, 10);
 
     renderer.init();
 
