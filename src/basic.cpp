@@ -41,24 +41,33 @@ void onSetup(int w, int h) {
     renderer.init();
 
     font = fontMan.addFont("default", Font::Properties(TEXT_SIZE), InputSource(DEFAULT));
-    font->addFace(fontMan.addFontFace(InputSource(FONT_AR), TEXT_SIZE));
+    // font->addFace(fontMan.addFontFace(InputSource(FONT_AR), TEXT_SIZE));
     font->addFace(fontMan.addFontFace(InputSource(FONT_HE), TEXT_SIZE));
-    font->addFace(fontMan.addFontFace(InputSource(FONT_HI), TEXT_SIZE));
-    font->addFace(fontMan.addFontFace(InputSource(FONT_JA), TEXT_SIZE));
-    font->addFace(fontMan.addFontFace(InputSource(FALLBACK), TEXT_SIZE));
+    //font->addFace(fontMan.addFontFace(InputSource(FONT_HI), TEXT_SIZE));
+    // font->addFace(fontMan.addFontFace(InputSource(FONT_JA), TEXT_SIZE));
+    // font->addFace(fontMan.addFontFace(InputSource(FALLBACK), TEXT_SIZE));
 
-    l.push_back(shaper.shape(font, "Eß hatte aber alle Welt einerlei Zünge und Sprache."));
-    l.push_back(shaper.shape(font, "وَكَانَتِ الارْضُ كُلُّهَا لِسَانا وَاحِدا وَلُغَةً وَاحِدًَ.")); // ar
-    l.push_back(shaper.shape(font, "ΚΑΙ ολόκληρη η γη ήταν μιας γλώσσας, και μιας φωνής.")); // el
-    l.push_back(shaper.shape(font, "And the whole earth was of one language, and of one speech."));
-    l.push_back(shaper.shape(font, "ERA entonces toda la tierra de una lengua y unas mismas palabras."));
-    l.push_back(shaper.shape(font, "Toute la terre avait une seule langue et les mêmes mots."));
-    l.push_back(shaper.shape(font, "nוַיְהִי כָל-הָאָרֶץ, שָׂפָה אֶחָת, וּדְבָרִים, אֲחָדִים.")); //he
-    l.push_back(shaper.shape(font, "सारी पृथ्वी पर एक ही भाषा, और एक ही बोली थी।")); // hi
-    l.push_back(shaper.shape(font, "全地は同じ発音、同じ言葉であった。")); //ja
-    l.push_back(shaper.shape(font, "온 땅의 구음이 하나이요 언어가 하나이었더라")); //ko
-    l.push_back(shaper.shape(font, "На всей земле был один язык и одно наречие."));
-    l.push_back(shaper.shape(font, "那時、天下人的口音言語、都是一樣。")); //zh-tw
+    l.push_back(shaper.shape(font, "יער הר כמון- קק\\\"ל"));
+
+    // l.push_back(shaper.shape(font, "Eß hatte aber alle Welt einerlei Zünge und Sprache."));
+
+    // l.push_back(shaper.shape(font, "कोलकाता"));
+
+    // l.push_back(shaper.shape(font, "को ल का ता "));
+    // l.push_back(shaper.shape(font, "को ल का ता"));
+    // l.push_back(shaper.shape(font, "ता "));
+    // l.push_back(shaper.shape(font, "ता"));
+    // l.push_back(shaper.shape(font, "وَكَانَتِ الارْضُ كُلُّهَا لِسَانا وَاحِدا وَلُغَةً وَاحِدًَ.")); // ar
+    // l.push_back(shaper.shape(font, "ΚΑΙ ολόκληρη η γη ήταν μιας γλώσσας, και μιας φωνής.")); // el
+    // l.push_back(shaper.shape(font, "And the whole earth was of one language, and of one speech."));
+    // l.push_back(shaper.shape(font, "ERA entonces toda la tierra de una lengua y unas mismas palabras."));
+    // l.push_back(shaper.shape(font, "Toute la terre avait une seule langue et les mêmes mots."));
+    // l.push_back(shaper.shape(font, "nוַיְהִי כָל-הָאָרֶץ, שָׂפָה אֶחָת, וּדְבָרִים, אֲחָדִים.")); //he
+    // l.push_back(shaper.shape(font, "सारी पृथ्वी पर एक ही भाषा, और एक ही बोली थी।")); // hi
+    // l.push_back(shaper.shape(font, "全地は同じ発音、同じ言葉であった。")); //ja
+    // l.push_back(shaper.shape(font, "온 땅의 구음이 하나이요 언어가 하나이었더라")); //ko
+    // l.push_back(shaper.shape(font, "На всей земле был один язык и одно наречие."));
+    // l.push_back(shaper.shape(font, "那時、天下人的口音言語、都是一樣。")); //zh-tw
 
     // BIDI - RTL paragraph
     // l.push_back(shaper.shape(font, "ممم 26 يي\r\nيي 12\r\n34 ووووو end"));
