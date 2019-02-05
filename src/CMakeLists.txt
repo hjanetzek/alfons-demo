@@ -41,7 +41,7 @@ target_link_libraries (alfons_wrap
 ########################################
 
 find_package(PkgConfig REQUIRED)
-pkg_search_module(GLFW REQUIRED glfw3)
+#pkg_search_module(GLFW REQUIRED glfw3)
 
 include_directories(src
   ${CMAKE_CURRENT_SOURCE_DIR}
@@ -55,7 +55,8 @@ target_link_libraries( basic
   alfons
   alfons_render
   # nanovg
-  ${GLFW_STATIC_LIBRARIES})
+  glfw
+  ${GLFW_LIBRARIES})
 
 add_executable( enspiraling
   enspiraling.cpp)
@@ -64,7 +65,8 @@ target_link_libraries( enspiraling
   LINK_PUBLIC
   alfons
   alfons_render
-  ${GLFW_STATIC_LIBRARIES})
+  glfw
+  ${GLFW_LIBRARIES})
 
 # add_executable( wrap
 #   wrap.cpp)
